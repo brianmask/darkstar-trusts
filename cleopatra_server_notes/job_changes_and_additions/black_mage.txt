@@ -1,0 +1,46 @@
+
+*******************
+*  Skill Changes  *
+*******************
+
+- A Staff
+- B+ Scythe
+
+
+*******************
+*  Trait Changes  *
+*******************
+
+	- Auto Refresh (Lv. 30)
+	- Magic Burst Bonus (Lv. 15/35/50/75)
+	- Occult Acument (Lv. 25/50/75)
+	- Elemental Celerity (Lv. 30/45/60/75)
+
+	
+	
+*********************
+*  Ability Changes  *
+*********************	
+
+	[Cascade]
+	- Lowered to Level 45
+
+	
+	[Last Resort]
+	- Moved to Level 30
+	- Adjustments: Grants 5% damage taken to MP, Negative Refresh Effect, Parry Bonus, and +25% Attack.  Additionally when MP is full a defense penalty of -5% is applied.  
+	  The penalty grows as MP is lost to a maximum of -20% defense.
+	
+	[Souleater]
+	- Moved to Level 45
+	
+
+*******************
+*  Spell Changes  *
+********************	
+
+	[Stun]
+	- While under the effect of Last Resort, Stun will gain more enmity
+
+	
+	

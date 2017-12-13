@@ -1,0 +1,68 @@
+-----------------------------------
+-- Ability: Fire Shot
+-- Consumes a Fire Card to enhance fire-based debuffs. Deals fire-based magic damage
+-- Burn effect: Enhanced DoT and INT-
+-----------------------------------
+
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+
+-----------------------------------
+-- onAbilityCheck
+-----------------------------------
+
+function onMobSkillCheck(target,mob,skill)
+    --ranged weapon/ammo: You do not have an appropriate ranged weapon equipped.
+    --no card: <name> cannot perform that action.
+ return 0;
+end;
+
+-----------------------------------
+-- onUseAbility
+-----------------------------------
+
+function onPetAbility(target, pet, skill)
+    local params = {};
+   --  params.includemab = true;
+    local diff = pet:getStat(MOD_AGI) - target:getStat(MOD_AGI);
+	local mab = (pet:getMod(MOD_MATT) / 100) + 1;
+	local ammo = pet:getMainLvl();
+    local dmg = (2 * (pet:getRangedDmg() + ammo) + diff) * mab;
+
+    target:delHP(dmg);
+    
+    
+    local effects = {};
+    local counter = 1;
+    local burn = target:getStatusEffect(EFFECT_BURN);
+    if (burn ~= nil) then
+        effects[counter] = burn;
+        counter = counter + 1;
+    end
+    local threnody = target:getStatusEffect(EFFECT_THRENODY);
+    if (threnody ~= nil and threnody:getSubPower() == MOD_ICERES) then
+        effects[counter] = threnody;
+        counter = counter + 1;
+    end
+    
+    if counter > 1 then
+        local effect = effects[math.random(1, counter-1)];
+        local duration = effect:getDuration();
+        local startTime = effect:getStartTime();
+        local tick = effect:getTick();
+        local power = effect:getPower();
+        local subpower = effect:getSubPower();
+        local tier = effect:getTier();
+        local effectId = effect:getType();
+        local subId = effect:getSubType();
+        power = power * 1.2;
+        target:delStatusEffectSilent(effectId);
+        target:addStatusEffect(effectId, power, tick, duration, subId, subpower, tier);
+        local newEffect = target:getStatusEffect(effectId);
+        newEffect:setStartTime(startTime);
+    end
+
+    target:updateClaim(pet);
+    return dmg;
+end;

@@ -1,0 +1,24 @@
+
+*******************
+*  Trait Changes  *
+*******************
+
+	- Magic Attack Bonus (Lv. 15/45)
+	- Fast Cast (Lv. 25/70)
+	- Ninja Tool Expertise (Lv. 15/35/55)
+	
+
+*********************
+*  Ability Changes  *
+*********************	
+
+	[Inin]
+	- Grants additional debuff effect to Elemental Ninjitsu based on element:
+		- Katon: Ni  -> Magic Accuracy Down
+		- Suiton: Ni -> Attack Down
+		- Doton: Ni  -> Accuracy Down
+		- Hyoton: Ni -> Evasion Down
+		- Huton: Ni  -> Defense Down
+		- Raiton: Ni -> Magic Evasiion Down
+	
+	
