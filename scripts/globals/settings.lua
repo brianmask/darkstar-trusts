@@ -1,4 +1,4 @@
-﻿-----------------------------------------------
+-----------------------------------------------
 -------------   GLOBAL SETTINGS   -------------
 -----------------------------------------------
 
@@ -33,7 +33,7 @@ RESTRICT_BY_EXPANSION = 0;
 
 -- CHARACTER CONFIG
 INITIAL_LEVEL_CAP = 50; -- The initial level cap for new players.  There seems to be a hardcap of 255.
-MAX_LEVEL = 99; -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
+MAX_LEVEL = 80; -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0; -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 START_GIL = 20000; -- Amount of gil given to newly created characters.
@@ -48,11 +48,11 @@ SHOP_PRICE = 1.000; -- Multiplies prices in NPC shops.
 GIL_RATE   = 5.000; -- Multiplies gil earned from quests.  Won't always display in game.
 EXP_RATE   = 4.000; -- Multiplies exp earned from fov.
 TABS_RATE  = 4.000; -- Multiplies tabs earned from fov.
-SAN_FAME   = 1.000; -- Multiplies fame earned from San d'Oria quests.
-BAS_FAME   = 1.000; -- Multiplies fame earned from Bastok quests.
-WIN_FAME   = 1.000; -- Multiplies fame earned from Windurst quests.
-NORG_FAME  = 1.000; -- Multiplies fame earned from Norg and Tenshodo quests.
-JEUNO_FAME = 1.000; -- Multiplies fame earned from Jeuno quests.
+SAN_FAME   = 4.000; -- Multiplies fame earned from San d'Oria quests.
+BAS_FAME   = 4.000; -- Multiplies fame earned from Bastok quests.
+WIN_FAME   = 4.000; -- Multiplies fame earned from Windurst quests.
+NORG_FAME  = 4.000; -- Multiplies fame earned from Norg and Tenshodo quests.
+JEUNO_FAME = 4.000; -- Multiplies fame earned from Jeuno quests.
 
 CURE_POWER  = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 SPELL_POWER = 1.000; -- Multiplies damage dealt by Elemental and Divine Magic.
@@ -81,8 +81,8 @@ CHEST_MIN_ILLUSION_TIME  = 1800;  -- 30 minutes
 
 -- Sets spawn type for: Behemoth, Fafnir, Adamantoise, King Behemoth, Nidhog, Aspidochelone.
 -- Use 0 for timed spawns, 1 for force pop only, 2 for both
-LandKingSystem_NQ = 0;
-LandKingSystem_HQ = 0;
+LandKingSystem_NQ = 2;
+LandKingSystem_HQ = 2;
 
 -- DYNAMIS SETTINGS
 BETWEEN_2DYNA_WAIT_TIME = 1;        -- wait time between 2 Dynamis (in real day) min: 1 day

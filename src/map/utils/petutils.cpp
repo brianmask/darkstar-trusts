@@ -1069,19 +1069,19 @@ namespace petutils
 			partySize += 1;
         } 
         
-		//Can't summon more than 4 Trusts
-        if (partySize > 7){
+		//Can't summon more than 5 Trusts
+        if (partySize > 9){
             return;
         }
 		
-        if (PMaster->PAlly.size() > 2 && trustsize == 0)
+        if (PMaster->PAlly.size() > 3 && trustsize == 0)
         {
 		    ShowWarning(CL_RED"Can't summon more than 3 Trusts \n" CL_RESET);
             PMaster->PAlly[2]->PBattleAI->SetCurrentAction(ACTION_FALL);
             PMaster->PAlly.pop_back();
         }		
         
-        else if (PMaster->PAlly.size() > 3 && trustsize == 1)
+        else if (PMaster->PAlly.size() > 4 && trustsize == 1)
         {
 		    ShowWarning(CL_RED"Maximum Trusts Spawned \n" CL_RESET);
             PMaster->PAlly[3]->PBattleAI->SetCurrentAction(ACTION_FALL);
